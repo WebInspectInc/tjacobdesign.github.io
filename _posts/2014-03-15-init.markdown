@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Init"
+date:   2014-03-15 23:38:00
+---
+
+Let us start with what you are not:
+
+This is not a site for the hardcore programmer. Those who know the quirks of C++, for example. Or if you take pride in knowing 47 different programming languages. That’s great, rock on! But this site is probably not for you.
+
+Nor is this site for the hardcore designer. If you’ve got Photoshop chops like no other then *I* should be the one learning from *you*. If you gobble gorgeous sites like toast for breakfast, then you probably aren’t going to need what I’m going to teach.
+
+These words are for the generalist.
