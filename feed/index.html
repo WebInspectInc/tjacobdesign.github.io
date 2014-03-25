@@ -1,0 +1,23 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title type="text" xml:lang="en">For a Designer</title>
+    <link type="application/atom+xml" href="http://foradesigner.com/" rel="self"/>
+    <link type="text" href="http://foradesigner.com" rel="alternate"/>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <id>http://foradesigner.com</id>
+    <author>
+        <name>Timothy Miller</name>
+    </author>
+    <rights>Copyright (c) 2014 Timothy Miller</rights>
+    {% for post in site.posts limit:20 %}
+    <entry>
+        <title>{{ post.title }}</title>
+        <link href="http://foradesigner.com{{ post.url }}/"/>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <id>http://foradesigner.com{{ post.url }}/</id>
+        <summary type="html">{{ post.content | xml_escape }}</summary>
+    </entry>
+    {% endfor %}
+</feed>
