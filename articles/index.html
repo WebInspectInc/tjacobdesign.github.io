@@ -8,10 +8,10 @@ title: All Articles | For a Designer
     {% for post in paginator.posts %}
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
       <p class="author">
-        <span class="date">{{ post.date }}</span>
+        <time class="date" datetime="{{ post.date }}">{{ post.date | date: "%B %-d, %Y" }}</time>
       </p>
       <div class="content">
-        {{ post.content }}
+        {{ post.excerpt }}
       </div>
     {% endfor %}
 
