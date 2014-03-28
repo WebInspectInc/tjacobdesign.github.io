@@ -3,12 +3,69 @@
     <title type="text" xml:lang="en">For a Designer</title>
     <link type="application/atom+xml" href="http://foradesigner.com/" rel="self"/>
     <link type="text" href="http://foradesigner.com" rel="alternate"/>
-    <updated>2014-03-24T23:06:36-05:00</updated>
+    <updated>2014-03-27T22:31:57-05:00</updated>
     <id>http://foradesigner.com</id>
     <author>
         <name>Timothy Miller</name>
     </author>
     <rights>Copyright (c) 2014 Timothy Miller</rights>
+    
+    <entry>
+        <title>Authoring SVG</title>
+        <link href="http://foradesigner.com/authoring-svg//"/>
+        <updated>2014-03-27T10:25:00Z</updated>
+        <id>http://foradesigner.com/authoring-svg//</id>
+        <summary type="html">&lt;p&gt;SVG (aka Scaleable Vector Graphics) is a programming language for drawing images. It’s a pretty difficult language to learn, and it has a lot of quirks, so most people don’t bother even trying to write it. We use programs that make it easier, like &lt;a href=&quot;https://www.adobe.com/products/fireworks.html&quot;&gt;Adobe Fireworks&lt;/a&gt;, or (my personal favorite) &lt;a href=&quot;http://bohemiancoding.com/sketch/&quot;&gt;Bohemian Coding’s Sketch&lt;/a&gt;. And they do the job well, they give us images that scale to be as big or as small as we like. But they aren’t enough.&lt;/p&gt;
+
+&lt;h2&gt;Why Would You Ever Code Pictures?&lt;/h2&gt;
+
+&lt;p&gt;There are a bunch of different ways to store and display images on the web. The big names are &lt;abbr title=&quot;Joint Photographic Experts Group&quot;&gt;.jpg&lt;/abbr&gt;, &lt;abbr title=&quot;Portable Network Graphics&quot;&gt;.png&lt;/abbr&gt;, and &lt;abbr title=&quot;Graphics Interchange Format&quot;&gt;.gif&lt;/abbr&gt; (yes indeed, .gifs are well known for animations and cats). Those three formats all work very differently, but they share one thing: They’re just a storage medium for pixels. They store every pixel on the image (give or take) as a color, and the computer merely has to read through those colors and build the image.&lt;/p&gt;
+
+&lt;p&gt;SVG doesn’t do that. Instead of storing individual pixels, SVG stores shapes. For example, SVG has a &lt;code&gt;rect&lt;/code&gt; element. Given the correct information, that bit of code draws a rectangle. There’s also a &lt;code&gt;circle&lt;/code&gt; element, an &lt;code&gt;ellipse&lt;/code&gt;, a &lt;code&gt;line&lt;/code&gt;, and so on and so forth. SVG constructs an image through the use of these shapes, rather than dumbly rendering just one pixel at a time.&lt;/p&gt;
+
+&lt;h3&gt;Why is SVG Useful?&lt;/h3&gt;
+
+&lt;p&gt;SVG has a few strengths over traditional image containers:&lt;/p&gt;
+
+&lt;h4&gt;Infinitely Scaleable&lt;/h4&gt;
+
+&lt;p&gt;It’s even in the name: it’s scaleable. We’re telling the computer to draw a shape, not a pixel, so it can keep the edges of that shape nice and sharp for us.&lt;/p&gt;
+
+&lt;p data-height=&quot;268&quot; data-theme-id=&quot;5360&quot; data-slug-hash=&quot;KBbpd&quot; data-default-tab=&quot;result&quot; class=&#39;codepen&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/creativembers/pen/KBbpd/&#39;&gt;Blinking, flapping, pecking chickens&lt;/a&gt; by Creativembers (&lt;a href=&#39;http://codepen.io/creativembers&#39;&gt;@creativembers&lt;/a&gt;) on &lt;a href=&#39;http://codepen.io&#39;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;script async src=&quot;//codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;(click “Edit in CodePen” and try resizing the window)&lt;/p&gt;
+
+&lt;h4&gt;Dynamic Data&lt;/h4&gt;
+
+&lt;p&gt;SVG is great for graphs, because all you have to do to change the graph is give it new numbers. We can change the image based on any data we like, and change that data whenever we like. No photoshop required.&lt;/p&gt;
+
+&lt;p data-height=&quot;399&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;EqKit&quot; data-default-tab=&quot;result&quot; class=&#39;codepen&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/tjacobdesign/pen/EqKit/&#39;&gt;EqKit&lt;/a&gt; by Timothy Miller (&lt;a href=&#39;http://codepen.io/tjacobdesign&#39;&gt;@tjacobdesign&lt;/a&gt;) on &lt;a href=&#39;http://codepen.io&#39;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;script async src=&quot;//codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;(plus it makes hover effects really easy)&lt;/p&gt;
+
+&lt;h4&gt;Easily Animateable&lt;/h4&gt;
+
+&lt;p&gt;Animation with other image formats is really precise, but kind of a pain. I have a confession to make: I get the shivers when I think about drawing frames. Good news for me then, SVG handles that too. All you have to do is tell it where to start and where to end, and it draws all the frames for you.&lt;/p&gt;
+
+&lt;p data-height=&quot;350&quot; data-theme-id=&quot;5360&quot; data-slug-hash=&quot;EmCoa&quot; data-default-tab=&quot;result&quot; class=&#39;codepen&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/agrimsrud/pen/EmCoa/&#39;&gt;SVG Pie Timer&lt;/a&gt; by Anders Grimsrud (&lt;a href=&#39;http://codepen.io/agrimsrud&#39;&gt;@agrimsrud&lt;/a&gt;) on &lt;a href=&#39;http://codepen.io&#39;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;script async src=&quot;//codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;(this one is a little more complex than that, but still no frames)&lt;/p&gt;
+
+&lt;h3&gt;And Another Thing&lt;/h3&gt;
+
+&lt;p&gt;SVG works out-of-the-box for high definition screens. That may not be a big concern right now, but with &lt;a href=&quot;http://daverupert.com/2014/01/4K-RWD/&quot;&gt;sub-$1000 4K displays coming&lt;/a&gt; we’d better be ready to scale in a big way. SVG gives us a good way to do that.&lt;/p&gt;
+
+&lt;h2&gt;So Jump on the SVG Band Wagon&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://css-tricks.com/using-svg/&quot;&gt;Here’s a good way to get started&lt;/a&gt;. It doesn’t involved actually writing any SVG, but it’s a good way to start thinking about it. We’ll get into the nitty gritty in future posts.&lt;/p&gt;
+</summary>
+    </entry>
     
     <entry>
         <title>Starting with Jekyll</title>

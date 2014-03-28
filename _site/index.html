@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>For a Designer | For a Designer</title>
         <meta name="viewport" content="width=device-width">
+        <link rel="alternate" type="application/atom+xml" title="RSS Feed for foradesigner.com" href="/feed/" />
 
         <link rel="stylesheet" href="/css/syntax.css">
         <link rel="stylesheet" href="/css/main.css">
@@ -29,60 +30,56 @@
 
   
   <article class="post">
-    <h1><a href="/starting-with-jekyll/">Starting with Jekyll</a></h1>
-    <p>Jekyll is a <a href="http://jekyllrb.com/">blog-aware static site generator</a>. It is the engine that this very site runs on, and here is where I’ll tell you what and why.</p>
+    <h1><a href="/authoring-svg/">Authoring SVG</a></h1>
+    <p>SVG (aka Scaleable Vector Graphics) is a programming language for drawing images. It’s a pretty difficult language to learn, and it has a lot of quirks, so most people don’t bother even trying to write it. We use programs that make it easier, like <a href="https://www.adobe.com/products/fireworks.html">Adobe Fireworks</a>, or (my personal favorite) <a href="http://bohemiancoding.com/sketch/">Bohemian Coding’s Sketch</a>. And they do the job well, they give us images that scale to be as big or as small as we like. But they aren’t enough.</p>
 
-<h2>Jekyll vs. WordPress</h2>
+<h2>Why Would You Ever Code Pictures?</h2>
 
-<p>It’s been a hot question for quite a while, should I use <a href="http://stevenyue.com/2012/08/12/jekyll-vs-wordpress-why-i-prefer-wordpress/">WordPress or Jekyll</a>? Fair warning: you aren’t going to find that answer here. Merely another piece of the puzzle that you’ll just have to assemble for yourself.</p>
+<p>There are a bunch of different ways to store and display images on the web. The big names are <abbr title="Joint Photographic Experts Group">.jpg</abbr>, <abbr title="Portable Network Graphics">.png</abbr>, and <abbr title="Graphics Interchange Format">.gif</abbr> (yes indeed, .gifs are well known for animations and cats). Those three formats all work very differently, but they share one thing: They’re just a storage medium for pixels. They store every pixel on the image (give or take) as a color, and the computer merely has to read through those colors and build the image.</p>
 
-<p>TL;DR: It depends. Go with what works best for your situation.</p>
+<p>SVG doesn’t do that. Instead of storing individual pixels, SVG stores shapes. For example, SVG has a <code>rect</code> element. Given the correct information, that bit of code draws a rectangle. There’s also a <code>circle</code> element, an <code>ellipse</code>, a <code>line</code>, and so on and so forth. SVG constructs an image through the use of these shapes, rather than dumbly rendering just one pixel at a time.</p>
 
-<h2>A Little Bit of Background</h2>
+<h3>Why is SVG Useful?</h3>
 
-<p>There are very few web devigners nowadays who can say that they haven’t used WordPress for one situation or another. It’s simply too big to ignore. That is certainly <em>not</em> the case with Jekyll, very few people have even heard of it, and it’s significantly less valuable to say you know Jekyll than it is to say you know WordPress. So from a purely practical standpoint, WordPress knowledge is significantly more valuable to have. I’ve already built nearly a dozen WP sites, so that wasn’t much of an incentive for me.</p>
+<p>SVG has a few strengths over traditional image containers:</p>
 
-<h2>What is a Static Site Generator? What Advantages Does It Have?</h2>
+<h4>Infinitely Scaleable</h4>
 
-<p>Jekyll, as mentioned above, is a static site generator. Geek talk, I know,  not everyone knows what that means, so I’ll tell you:</p>
+<p>It’s even in the name: it’s scaleable. We’re telling the computer to draw a shape, not a pixel, so it can keep the edges of that shape nice and sharp for us.</p>
 
-<p>Every website on the web is controlled by two computers. The computer that you’re using (your laptop, desktop, or your phone, it doesn’t matter), and another completely separate computer that we call that the <a href="http://en.wikipedia.org/wiki/Server_%28computing%29">server</a>. The server sends all of the files needed to display a website.</p>
+<p data-height="268" data-theme-id="5360" data-slug-hash="KBbpd" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/creativembers/pen/KBbpd/'>Blinking, flapping, pecking chickens</a> by Creativembers (<a href='http://codepen.io/creativembers'>@creativembers</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
-<p>The server also does a lot more than that, things like saving and retrieving data and pasting files together to make bigger files. A preprocessor does all of that data manipulation and file pasting on the developer’s <em>local</em> machine, rather than doing all of that on the server. That gives a lot more control to <em>your</em> computer (or phone, whatever), which comes with a whole host of benefits.</p>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
 
-<h2>The Benefits</h2>
+<p>(click “Edit in CodePen” and try resizing the window)</p>
 
-<h3>Easy on the Server</h3>
+<h4>Dynamic Data</h4>
 
-<p>All your server has to do is send a few files over. No database connections, no backend logic or code, nothing. Just plain files.</p>
+<p>SVG is great for graphs, because all you have to do to change the graph is give it new numbers. We can change the image based on any data we like, and change that data whenever we like. No photoshop required.</p>
 
-<h3>Free Hosting</h3>
+<p data-height="399" data-theme-id="0" data-slug-hash="EqKit" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/tjacobdesign/pen/EqKit/'>EqKit</a> by Timothy Miller (<a href='http://codepen.io/tjacobdesign'>@tjacobdesign</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
-<p><a href="http://pages.github.com">Github Pages</a> offers free hosting to Jekyll-built sites. You have to know a bit about Git and Github, and it’s only free if you make your site open source (like <a href="">ForADesigner.com</a>). But if you’re okay with that then it isn’t <a href="http://stackoverflow.com/questions/9222245/what-are-the-limits-of-github-hosting">too good to be true</a>. I personally rather enjoy never needing to worry about whether my site is up or not, and for now it’s working out rather well.</p>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
 
-<h3>Unhackable</h3>
+<p>(plus it makes hover effects really easy)</p>
 
-<p>...well. Not <em>really</em> unhackable, but about as close as it gets. Some villain <em>can</em> hack it, but if someone <em>does</em> then all you have to do is upload a new copy. Because you have to build the site on your computer before you serve it up, you always have a backup sitting on your computer. No more lost data for you.</p>
+<h4>Easily Animateable</h4>
 
-<h2>The Downsides</h2>
+<p>Animation with other image formats is really precise, but kind of a pain. I have a confession to make: I get the shivers when I think about drawing frames. Good news for me then, SVG handles that too. All you have to do is tell it where to start and where to end, and it draws all the frames for you.</p>
 
-<h3>Less Flexible</h3>
+<p data-height="350" data-theme-id="5360" data-slug-hash="EmCoa" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/agrimsrud/pen/EmCoa/'>SVG Pie Timer</a> by Anders Grimsrud (<a href='http://codepen.io/agrimsrud'>@agrimsrud</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
-<p>Changing your website means rebuilding the whole thing. That means that publishing can only happen on your computer. You can still write on your phone, but you can’t publish that until you build it on your computer. Bummer.</p>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
 
-<h3>Hard Command Line Jumbleytron 2000</h3>
+<p>(this one is a little more complex than that, but still no frames)</p>
 
-<p>I know, command line is hard. And you have to use it for Jekyll. For some of you that is an immediate turn off, but hopefully you can be convinced otherwise, because it’s really a very small downside for the power it gives you.</p>
+<h3>And Another Thing</h3>
 
-<h3>No Comments</h3>
+<p>SVG works out-of-the-box for high definition screens. That may not be a big concern right now, but with <a href="http://daverupert.com/2014/01/4K-RWD/">sub-$1000 4K displays coming</a> we’d better be ready to scale in a big way. SVG gives us a good way to do that.</p>
 
-<p>This one is pretty easy to fix using a services like <a href="http://disqus.com/">Disqus</a>. But in a way that means you don’t “own your own content”, which is a problem for some people. This blog is, of course, completely free and open source, so obviously I’m not much concerned about that.</p>
+<h2>So Jump on the SVG Band Wagon</h2>
 
-<h2>It’s a Wrap</h2>
-
-<p>I told you that I wasn’t going to give you an answer. Jekyll and WordPress are both great, but in different ways. Hopefully this gives you a good place to start in your quest.</p>
-
-<p>I will explore both of them further in the coming months. Stay tuned.</p>
+<p><a href="http://css-tricks.com/using-svg/">Here’s a good way to get started</a>. It doesn’t involved actually writing any SVG, but it’s a good way to start thinking about it. We’ll get into the nitty gritty in future posts.</p>
 
   </article>
 </div>
@@ -98,8 +95,9 @@
             </div>
             <div class="contact">
               <p>
-                <a href="https://github.com/tjacobdesign">github.com/tjacobdesign</a><br />
-                <a href="https://twitter.com/tjacobdesign">twitter.com/tjacobdesign</a><br />
+                <a href="https://github.com/tjacobdesign">tjacobdesign</a><br />
+                <a href="https://twitter.com/tjacobdesign">@tjacobdesign</a><br />
+                <a href="/feed">RSS Feed</a>
               </p>
             </div>
           </div>
