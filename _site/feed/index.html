@@ -3,12 +3,59 @@
     <title type="text" xml:lang="en">For a Designer</title>
     <link type="application/atom+xml" href="http://foradesigner.com/" rel="self"/>
     <link type="text" href="http://foradesigner.com" rel="alternate"/>
-    <updated>2014-03-27T22:31:57-05:00</updated>
+    <updated>2014-04-02T23:18:38-05:00</updated>
     <id>http://foradesigner.com</id>
     <author>
         <name>Timothy Miller</name>
     </author>
     <rights>Copyright (c) 2014 Timothy Miller</rights>
+    
+    <entry>
+        <title>Animate All the Things!</title>
+        <link href="http://foradesigner.com/rAF-FTW//"/>
+        <updated>2014-04-01T21:05:00Z</updated>
+        <id>http://foradesigner.com/rAF-FTW//</id>
+        <summary type="html">&lt;p&gt;Animation is hard. Making an animation feel right takes an equal concentration of sweat, time, and luck, and few give enough of themselves to produce anything truly good. It doesn’t make it any easier that there are so many different ways to animate things on the web, so here is where you’ll find what you need to choose the right tech for the job.&lt;/p&gt;
+
+&lt;h2&gt;CSS Animations&lt;/h2&gt;
+
+&lt;p&gt;First and fastest are CSS animations. CSS animations are quick to code and super easy to tweak. CSS animations work particularly well when you’re changing CSS controlled states (such as &lt;code&gt;hover&lt;/code&gt;, &lt;code&gt;focus&lt;/code&gt;, or &lt;code&gt;active&lt;/code&gt;), but they can transition most CSS properties as long as all you need is from one value to another value (such as red to pink). If you think outside the box you can get some pretty &lt;a href=&quot;http://leaverou.github.io/animatable/&quot;&gt;wacky results&lt;/a&gt;. (I particularly like the 3D examples at the bottom)&lt;/p&gt;
+
+&lt;p&gt;There are two ways to animate using CSS. Transitioning from one thing to another:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.test&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;pink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.5s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.test&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And you can also define your own keyframe animations:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.test&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alternate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;infinite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@keyframes&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;pink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;JavaScript Animations&lt;/h2&gt;
+
+&lt;p&gt;Next is the tried-and-true but lacking. This is how we used to do animations on the web:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;set&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</summary>
+    </entry>
     
     <entry>
         <title>Authoring SVG</title>
@@ -64,6 +111,19 @@
 &lt;h2&gt;So Jump on the SVG Band Wagon&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://css-tricks.com/using-svg/&quot;&gt;Here’s a good way to get started&lt;/a&gt;. It doesn’t involved actually writing any SVG, but it’s a good way to start thinking about it. We’ll get into the nitty gritty in future posts.&lt;/p&gt;
+</summary>
+    </entry>
+    
+    <entry>
+        <title>Starting Small</title>
+        <link href="http://foradesigner.com/startingsmall//"/>
+        <updated>2014-03-24T20:42:00Z</updated>
+        <id>http://foradesigner.com/startingsmall//</id>
+        <summary type="html">&lt;p&gt;There’s a problem with absolutely loving something that isn’t your profession. Your profession forces you to show up every day, to do good work, and to ship. The amateur is held to no such standard, which makes shipping all the more important.&lt;/p&gt;
+
+&lt;h2&gt;Why Shipping is Goal Numero Uno&lt;/h2&gt;
+
+&lt;p&gt;This is a test.&lt;/p&gt;
 </summary>
     </entry>
     
