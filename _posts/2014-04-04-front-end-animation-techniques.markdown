@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Animate All the Things!"
-date:   2014-04-1 21:05:00
+title:  "Front-End Animation Techniques"
+date:   2014-04-4 20:46:00
 tags: "JavaScript"
 ---
 
@@ -114,7 +114,7 @@ It has an actual [animate element](http://www.w3.org/TR/SVG11/animate.html#Anima
 
 ## Related Resources
 
-* [Flashless Animation in CSS3](http://24ways.org/2012/flashless-animation/) by Rachel Nabors. She’s also got an [class about it](http://frontendmasters.com/courses/animation-storytelling-html5-css3/).
+* [Flashless Animation in CSS3](http://24ways.org/2012/flashless-animation/) by Rachel Nabors. She’s also got an [class outlining how to do it](http://frontendmasters.com/courses/animation-storytelling-html5-css3/).
 * [Really neat hacks for CSS animations](http://css-tricks.com/css-animation-tricks/) on CSS-Tricks
 * [Advice for CSS transitions](http://trentwalton.com/2010/03/22/css3-in-transition/) from Trent Walton.
 * [RequestAnimationFrame info](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) on Mozilla Hacks.
