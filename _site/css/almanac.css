@@ -8,12 +8,54 @@
 	float: left;
 }
 
+.list > li {
+	margin-top: 20px;
+}
+
+.list > li:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.purple {
+	color: #7600EC;
+}
+
+.orange {
+	color: #FF0002;
+}
+
+.list h2 {;
+	color: #7600EC;
+}
+
+.tags h2 {
+	color: #FF0002;
+}
 
 .tags ol li:before {
 	content: '<';
 }
 .tags ol li:after {
 	content: '>';
+}
+
+.list h2 {
+	margin-top: 0;
+	font-size: 3em;
+	height: 60px;
+	width: 60px;
+	float: left;
+}
+.list ol {
+	width: 80%;
+	float: left;
+}
+.list ol:after {
+	content: '';
+	display: table;
+	clear: both;
 }
 
 li {
