@@ -1,0 +1,21 @@
+
+[role="main"] {
+	overflow: hidden;
+}
+
+.span-1-2 {
+	background: white;
+	float: left;
+}
+
+
+.tags ol li:before {
+	content: '<';
+}
+.tags ol li:after {
+	content: '>';
+}
+
+li {
+	list-style: none;
+}
