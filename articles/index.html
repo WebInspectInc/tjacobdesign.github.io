@@ -7,9 +7,7 @@ title: All Articles | For a Designer
   <div>
     {% for post in paginator.posts %}
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-      <p class="author">
-        <time class="date" datetime="{{ post.date }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-      </p>
+      <p class="time">Published <time class="meta" datetime="{{ post.date }}">{{ post.date | date_to_string }}</time> by{% if post.author %} post.author {% else %} Timothy Miller {% endif %}
       <div class="content">
         {{ post.excerpt }}
       </div>
