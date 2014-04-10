@@ -5,7 +5,8 @@ layout: default
 <section role="main">
   <article class="post">
     <h1>{{ page.title }}</h1>
-    <time class="meta" datetime="{{ page.date }}">{{ page.date | date_to_string }}</p>
+    <p class="time">Published <time class="meta" datetime="{{ page.date }}">{{ page.date | date_to_string }}</time> by{% if page.author %} page.author {% else %} Timothy Miller {% endif %}
+
     {{ content }}
   </article>
 </section>
