@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>a | SVG Almanac For a Designer</title>
+        <title>a | SVG Almanac | For a Designer</title>
         <meta name="viewport" content="width=device-width">
         <link rel="alternate" type="application/atom+xml" title="RSS Feed for foradesigner.com" href="/feed/" />
 
@@ -31,8 +31,21 @@
             <div>
               <a href="/almanac">Back to Almanac</a>
               <h1>&lt;a&gt;</h1>
+              <p class="time">Last updated on <time datetime="2014-04-10 09:31:00 UTC">10 Apr 2014</time> by Timothy Miller </p>
+              <p>SVG provides an ‘a’ element. Just like its HTML counterpart, the ‘a’ tag (which stands for anchor) links one webpage with another webpage. By default an ‘a’ tag can contain any other SVG element.</p>
 
-<p>SVG provides an ‘a’ element. Just like its HTML counterpart, the ‘a’ tag (which stands for anchor) links one webpage with another webpage. By default an ‘a’ tag can contain any other SVG element.</p>
+<h2>Gotchas</h2>
+
+<p>If you’re using an <code>xlink:href</code> you need to declare the <code>xmlns:xlink</code> namespace (like the example below).</p>
+
+<h2>Example</h2>
+
+<div class="highlight"><pre><code class="xml"><span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">xlink:href=</span><span class="s">&quot;http://google.com/&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;rect</span> <span class="na">width=</span><span class="s">&quot;30&quot;</span> <span class="na">height=</span><span class="s">&quot;30&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div>
 
             </div>
           </article>
