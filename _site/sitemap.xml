@@ -3,7 +3,7 @@
   
     
     <url>
-      <loc>/front-end-animation-techniques/</loc>
+      <loc>http://foradesigner.com/front-end-animation-techniques/</loc>
       
         <lastmod>2014-04-04T20:46:00Z</lastmod>
       
@@ -18,7 +18,7 @@
   
     
     <url>
-      <loc>/authoring-svg/</loc>
+      <loc>http://foradesigner.com/authoring-svg/</loc>
       
         <lastmod>2014-03-27T10:25:00Z</lastmod>
       
@@ -33,7 +33,7 @@
   
     
     <url>
-      <loc>/starting-with-jekyll/</loc>
+      <loc>http://foradesigner.com/starting-with-jekyll/</loc>
       
         <lastmod>2014-03-20T21:05:00Z</lastmod>
       
@@ -48,7 +48,7 @@
   
     
     <url>
-      <loc>/init/</loc>
+      <loc>http://foradesigner.com/init/</loc>
       
         <lastmod>2014-03-15T23:38:00Z</lastmod>
       
@@ -64,24 +64,9 @@
   
     
     <url>
-      <loc>/404.html</loc>
+      <loc>http://foradesigner.com/404.html</loc>
       
-        <lastmod>2014-04-11T23:19:32-05:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/about/</loc>
-      
-        <lastmod>2014-04-11T23:19:32-05:00</lastmod>
+        <lastmod>2014-04-11T23:24:44-05:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -94,9 +79,24 @@
   
     
     <url>
-      <loc>/articles/</loc>
+      <loc>http://foradesigner.com/about/</loc>
       
-        <lastmod>2014-04-11T23:19:32-05:00</lastmod>
+        <lastmod>2014-04-11T23:24:44-05:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://foradesigner.com/articles/</loc>
+      
+        <lastmod>2014-04-11T23:24:44-05:00</lastmod>
       
       
         <changefreq>weekly</changefreq>
@@ -109,24 +109,9 @@
   
     
     <url>
-      <loc>/feed/</loc>
+      <loc>http://foradesigner.com/feed/</loc>
       
-        <lastmod>2014-04-11T23:19:32-05:00</lastmod>
-      
-      
-        <changefreq>weekly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/</loc>
-      
-        <lastmod>2014-04-11T23:19:32-05:00</lastmod>
+        <lastmod>2014-04-11T23:24:44-05:00</lastmod>
       
       
         <changefreq>weekly</changefreq>
@@ -139,9 +124,24 @@
   
     
     <url>
-      <loc>/sitemap.xml</loc>
+      <loc>http://foradesigner.com/</loc>
       
-        <lastmod>2014-04-11T23:19:32-05:00</lastmod>
+        <lastmod>2014-04-11T23:24:44-05:00</lastmod>
+      
+      
+        <changefreq>weekly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://foradesigner.com/sitemap.xml</loc>
+      
+        <lastmod>2014-04-11T23:24:44-05:00</lastmod>
       
       
         <changefreq>weekly</changefreq>
