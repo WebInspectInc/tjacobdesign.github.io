@@ -54,6 +54,10 @@ a:hover {
   color: #027999;
 }
 
+.hidden {
+  display: none;
+}
+
 /*
  * MiniGrid
  */
@@ -160,7 +164,7 @@ nav a:last-child:after {
   content: "";
 }
 
-.meta {
+.time {
   color: #aaa;
 }
 
