@@ -53,6 +53,10 @@ a:hover {
   color: #027999;
 }
 
+.hidden {
+  display: none;
+}
+
 /*
  * MiniGrid
  */

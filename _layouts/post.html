@@ -9,4 +9,9 @@ layout: default
 
     {{ content }}
   </article>
+  {% if page.gurl %}
+  	<a href="{{ page.gurl }}?rel=author" class="hidden">Google</a>
+  {% else %}
+	<a href="https://www.google.com/+TimothyMillerTheFirst?rel=author" class="hidden">Google</a>
+  {% endif %}
 </section>
