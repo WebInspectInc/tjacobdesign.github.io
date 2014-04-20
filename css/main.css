@@ -15,7 +15,7 @@
 html, body { height: 100%; }
 
 body {
-  background: #333;
+  background: #2C3E50;
   font-family: Vollkorn, Times, serif;
   text-align: center;
 }
@@ -111,10 +111,7 @@ a:hover {
 .site {
   font-size: 115%;
   text-align: left;
-  max-width: 1080px;
-  margin: 3em auto 2em;
   line-height: 1.5em;
-  padding: 8px;
 }
 
 .header {
@@ -131,23 +128,24 @@ a:hover {
   float: right;
 }
 
-.header h1 {
-  margin-bottom: 16px;
-}
-
 .cHead {
+  margin: 1.5em 0.5em 0.5em;
+  font-size: 3.2em;
+  text-shadow: 2px 2px 0 #007DB3;
   display: block;
   text-align: center;
 }
 
-.header a.extra {
-  color: #aaa;
-  margin-left: 1em;
+@media (max-width: 600px) {
+  .cHead {
+    font-size: 2.2em;
+  }
 }
 
-.header a.extra:hover {
-  color: #000;
+.cHead a:hover {
+  color: #00B3FF;
 }
+
 
 nav {
   position: absolute;
@@ -170,7 +168,6 @@ nav a:last-child:after {
 [role="main"] {
   background: white;
   margin: 0;
-  border-radius: 10px;
 }
 
 [role="main"] h1 a:link,
