@@ -6,28 +6,28 @@ sitemap:
 ---
 
 <section role="main">
-  <div>
-    {% for post in paginator.posts %}
-      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-      <p class="time">Published <time class="meta" datetime="{{ post.date }}">{{ post.date | date_to_string }}</time> by{% if post.author %} post.author {% else %} Timothy Miller {% endif %}
-      <div class="content">
-        {{ post.excerpt }}
-      </div>
-    {% endfor %}
+	<div>
+		{% for post in paginator.posts %}
+			<p class="time">Published <time class="meta" datetime="{{ post.date }}">{{ post.date | date_to_string }}</time> by{% if post.author %} post.author {% else %} Timothy Miller {% endif %}</p>
+			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+			<div class="content">
+				{{ post.excerpt }}
+			</div>
+		{% endfor %}
 
 
-    <div class="pagination">
-      {% if paginator.previous_page %}
-        {% if paginator.previous_page != 1 %}
-          <a href="/articles/{{ paginator.previous_page }}/" class="previous">Previous</a>
-        {% else %}
-          <a href="/articles/" class="previous">Previous</a>
-        {% endif %}
-      {% endif %}
-      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-      {% if paginator.next_page %}
-        <a href="/articles/{{ paginator.next_page }}/" class="next">Next</a>
-      {% endif %}
-    </div>
-  </div>
+		<div class="pagination">
+			{% if paginator.previous_page %}
+				{% if paginator.previous_page != 1 %}
+					<a href="/articles/{{ paginator.previous_page }}/" class="previous">Previous</a>
+				{% else %}
+					<a href="/articles/" class="previous">Previous</a>
+				{% endif %}
+			{% endif %}
+			<span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+			{% if paginator.next_page %}
+				<a href="/articles/{{ paginator.next_page }}/" class="next">Next</a>
+			{% endif %}
+		</div>
+	</div>
 </section>
