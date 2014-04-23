@@ -7,10 +7,11 @@
 		<meta name="viewport" content="width=device-width">
 		<link rel="alternate" type="application/atom+xml" title="RSS Feed for foradesigner.com" href="/feed/" />
 
-		<link rel="stylesheet" href="/css/syntax.css">
-		<link rel="stylesheet" href="/css/main.css">
-	</head>
-	<body>
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+        {% if page.css %} <link rel="stylesheet" href="{{ page.css }}">{% endif %}
+    </head>
+    <body>
 
 		<div class="site">
 			<header class="header">
