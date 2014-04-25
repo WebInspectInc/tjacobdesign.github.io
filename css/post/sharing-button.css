@@ -1,0 +1,57 @@
+.special-share {
+	position: relative;
+	display: inline-block;
+	background: #4693D0;
+	color: white;
+	text-decoration: none;
+	padding: 20px 50px;
+	margin: 20px auto 20px;
+	font-family: sans-serif;
+	border-radius: 3px;
+	cursor: pointer;
+	overflow: hidden;
+	text-align: center;
+}
+.special-share:hover a, .special-share.focus a {
+	-webkit-transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
+	transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
+	opacity: 1;
+}
+.special-share:hover a.first, .special-share:hover a.third, .special-share.focus a.first, .special-share.focus a.third {
+	text-indent: 0;
+}
+.special-share:hover a.second, .special-share.focus a.second {
+	line-height: 3;
+	padding-top: 0;
+}
+.special-share a {
+	font-family: 'FontAwesome', sans-serif;
+	font-size: 1.3em;
+	opacity: 0;
+	-webkit-transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out, padding-top 250ms ease-out;
+	transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out, padding-top 250ms ease-out;
+	color: white;
+	text-decoration: none;
+	line-height: 3;
+	display: inline-block;
+	position: absolute;
+	width: 33.33%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #4693D0;
+}
+.special-share a.first {
+	text-indent: -60px;
+}
+.special-share a.second {
+	line-height: 1;
+	background: #0A5693;
+	left: 33.33%;
+	padding-top: 2em;
+}
+.special-share a.third {
+	text-indent: 60px;
+	background: #69903E;
+	left: 66.65%;
+}
