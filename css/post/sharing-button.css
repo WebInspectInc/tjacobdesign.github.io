@@ -1,4 +1,4 @@
-.special-share {
+.special-share, .special-click {
 	position: relative;
 	display: inline-block;
 	background: #4693D0;
@@ -9,22 +9,20 @@
 	font-family: sans-serif;
 	border-radius: 3px;
 	cursor: pointer;
-	overflow: hidden;
 	text-align: center;
 }
-.special-share:hover a, .special-share.focus a {
-	-webkit-transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
-	transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
-	opacity: 1;
+
+.buffer:after {
+	content: '';
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	border: 20px solid transparent;
 }
-.special-share:hover a.first, .special-share:hover a.third, .special-share.focus a.first, .special-share.focus a.third {
-	text-indent: 0;
-}
-.special-share:hover a.second, .special-share.focus a.second {
-	line-height: 3;
-	padding-top: 0;
-}
-.special-share a {
+
+.special-share a, .special-click a {
 	font-family: 'FontAwesome', sans-serif;
 	font-size: 1.3em;
 	opacity: 0;
@@ -40,18 +38,56 @@
 	left: 0;
 	top: 0;
 	background: #4693D0;
+	pointer-events: none;
 }
-.special-share a.first {
+.special-share a.first,
+.special-click a.first {
 	text-indent: -60px;
 }
-.special-share a.second {
+.special-share a.second,
+.special-click a.second {
 	line-height: 1;
 	background: #0A5693;
 	left: 33.33%;
 	padding-top: 2em;
 }
-.special-share a.third {
+.special-share a.third,
+.special-click a.third {
 	text-indent: 60px;
 	background: #69903E;
 	left: 66.65%;
+}
+
+@media (max-width: 600px) {
+	/* Always showing on mobile */
+	.special-share a {
+		-webkit-transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
+		transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
+		opacity: 1;
+		pointer-events: auto;
+	}
+	.special-share a.first, .special-share a.third {
+		text-indent: 0;
+		pointer-events: auto;
+	}
+	.special-share a.second {
+		line-height: 3;
+		padding-top: 0;
+	}
+}
+
+.special-share:hover a,
+.focus a {
+	-webkit-transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
+	transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
+	opacity: 1;
+}
+.special-share:hover a.first, .special-share:hover a.third,
+.focus a.first, .focus a.third {
+	text-indent: 0;
+}
+.special-share:hover a.second,
+.focus a.second {
+	line-height: 3;
+	padding-top: 0;
 }
