@@ -4,6 +4,7 @@ title: "On Skinning a Sharing Button"
 date: 2014-4-26 7:52:00
 css: "/css/post/sharing-button.css"
 js: "/js/post/sharing-buttons.js"
+hasComments: true
 ---
 
 Sharing buttons. They're everywhere, from big sites like the NYTimes to little “Mom and Pop” shops. Social networks make sure that they’re super easy to implement, since sharing *is* the meat and potatoes of what they do. And every developer out there has a different idea of how they should work. I am no exception, and this is my take.
