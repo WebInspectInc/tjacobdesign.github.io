@@ -1,0 +1,93 @@
+.special-share, .special-click {
+	position: relative;
+	display: inline-block;
+	background: #4693D0;
+	color: white;
+	text-decoration: none;
+	padding: 20px 50px;
+	margin: 20px auto 20px;
+	font-family: sans-serif;
+	border-radius: 3px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.buffer:after {
+	content: '';
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	border: 20px solid transparent;
+}
+
+.special-share a, .special-click a {
+	font-family: 'FontAwesome', sans-serif;
+	font-size: 1.3em;
+	opacity: 0;
+	-webkit-transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out, padding-top 250ms ease-out;
+	transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out, padding-top 250ms ease-out;
+	color: white;
+	text-decoration: none;
+	line-height: 3;
+	display: inline-block;
+	position: absolute;
+	width: 33.33%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #4693D0;
+	pointer-events: none;
+}
+.special-share a.first,
+.special-click a.first {
+	text-indent: -60px;
+}
+.special-share a.second,
+.special-click a.second {
+	line-height: 1;
+	background: #0A5693;
+	left: 33.33%;
+	padding-top: 2em;
+}
+.special-share a.third,
+.special-click a.third {
+	text-indent: 60px;
+	background: #69903E;
+	left: 66.65%;
+}
+
+@media (max-width: 600px) {
+	/* Always showing on mobile */
+	.special-share a {
+		-webkit-transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
+		transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
+		opacity: 1;
+		pointer-events: auto;
+	}
+	.special-share a.first, .special-share a.third {
+		text-indent: 0;
+		pointer-events: auto;
+	}
+	.special-share a.second {
+		line-height: 3;
+		padding-top: 0;
+	}
+}
+
+.special-share:hover a,
+.focus a {
+	-webkit-transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
+	transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
+	opacity: 1;
+}
+.special-share:hover a.first, .special-share:hover a.third,
+.focus a.first, .focus a.third {
+	text-indent: 0;
+}
+.special-share:hover a.second,
+.focus a.second {
+	line-height: 3;
+	padding-top: 0;
+}

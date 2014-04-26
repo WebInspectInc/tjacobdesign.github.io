@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@font-face {
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-weight: normal;
+	src: url('http://weloveiconfonts.com/api/fonts/fontawesome/fontawesome-webfont.eot');
+	src: url('http://weloveiconfonts.com/api/fonts/fontawesome/fontawesome-webfont.eot?#iefix') format('eot'), 
+	url('http://weloveiconfonts.com/api/fonts/fontawesome/fontawesome-webfont.woff') format('woff'), 
+	url('http://weloveiconfonts.com/api/fonts/fontawesome/fontawesome-webfont.ttf') format('truetype'), 
+	url('http://weloveiconfonts.com/api/fonts/fontawesome/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
+}
+
+.special-share {
+	position: relative;
+	display: inline-block;
+	font-family: Ubuntu, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	background: #4693D0;
+	color: white;
+	text-decoration: none;
+	padding: 20px 40px;
+	margin: 10px auto;
+	border-radius: 3px;
+	cursor: pointer;
+	overflow: hidden;
+}
+.special-share:hover a {
+	-webkit-transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
+	transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out;
+	opacity: 1;
+}
+.special-share:hover a.first, .special-share:hover a.third {
+	text-indent: 0;
+}
+.special-share:hover a.second {
+	line-height: 3;
+	padding-top: 0;
+}
+.special-share a {
+	font-family: 'FontAwesome', sans-serif;
+	font-size: 1.3em;
+	opacity: 0;
+	-webkit-transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out, padding-top 250ms ease-out;
+	transition: opacity 250ms linear, text-indent 250ms ease-out, line-height 250ms ease-out, padding-top 250ms ease-out;
+	color: white;
+	text-decoration: none;
+	line-height: 3;
+	display: inline-block;
+	position: absolute;
+	width: 33.33%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	text-align: center;
+	background: #4693D0;
+}
+.special-share a.first {
+	text-indent: -60px;
+}
+.special-share a.second {
+	line-height: 1;
+	background: #0A5693;
+	left: 33.33%;
+	padding-top: 2em;
+}
+.special-share a.third {
+	text-indent: 60px;
+	background: #69903E;
+	left: 66.65%;
+}
