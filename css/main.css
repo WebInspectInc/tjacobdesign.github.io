@@ -9,6 +9,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	position: relative;
 }
 
@@ -246,7 +247,7 @@ nav a:last-child:after {
 }
 .post pre {
 	border: 1px solid #ddd;
-	background-color: #eef;
+	background-color: #2C3E50;
 	padding: 0 .4em;
 	overflow-x: scroll;
 }
@@ -257,7 +258,6 @@ nav a:last-child:after {
 
 .post code {
 	border: 1px solid #ddd;
-	background-color: #eef;
 	padding: 0 .2em;
 }
 
