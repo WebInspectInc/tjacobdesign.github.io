@@ -29,11 +29,3 @@ The CSS `transition` property takes up to four arguments: a *property*, a *durat
 * Then comes the duration. This is how long the animation will take. You can define it using seconds (`1s`) or milliseconds (`1000ms`).
 * After that you can use a timing function. This helps bring even more life to your animations if used properly. Rule of thumb: for quick animations (less than 100ms) use `linear`, or else it‘ll probably just look laggy. You can play with timing functions at [cubic-bezier.com](http://cubic-bezier.com/).
 * And finally a delay. I don’t use this value as much on transitions as I do on animations, but it can still be useful. Same as duration, you can define it using seconds or millseconds.
-
-
-<p class="special-share" id="specialShare">
-	Share this page
-	<a href="#" class="first"></a>
-	<a href="#" class="second"></a>
-	<a href="#" class="third"></a>
-</p>
