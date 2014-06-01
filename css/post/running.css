@@ -1,0 +1,65 @@
+body {
+	background: #476E4D;
+	color: #476E4D;
+}
+
+text {
+	font-family: 'Folks';
+}
+
+h1 {
+	display: none;
+}
+
+a:link, a:visited {
+	color: #669C6E;
+}
+
+.cHead {
+	text-shadow: none;
+}
+
+header a:link, header a:visited {
+	color: white;
+}
+header a:hover, header a:active, .cHead a:hover {
+	color: #669C6E;
+}
+
+.time {
+	text-align: center;
+}
+
+.ran {
+	display: inline-block;
+	vertical-align: top;
+	height: 40px;
+	top: -8px;
+}
+
+p {
+	color: #476E4D;
+}
+
+.footer:before {
+	background: #669C6E;
+}
+
+.footer p {
+	color: white;
+}
+.footer a {
+	color: white;
+}
+
+.nounder {
+	text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Folks';
+	src: url('../../fonts/folks-normal-webfont.woff') format('woff'),
+		 url('../../fonts/folks-normal-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
