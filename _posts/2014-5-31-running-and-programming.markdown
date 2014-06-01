@@ -3,6 +3,7 @@ layout: post
 title: "Running and Programming"
 date: 2014-5-31 4:16:00
 css: "/css/post/running.css"
+hasComments: true
 ---
 
 <a href="/running-and-programming" class="nounder"><svg version="1.1" viewBox="0 0 151 111">
