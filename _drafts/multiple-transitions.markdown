@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Multiple Transitions"
-date: 2014-4-22 9:16:00
+date: 2014-6-7 7:45:00
 css: "/css/post/multiple-transitions.css"
 ---
 
-The CSS transition property is essential for modern UI design. Animation brings an interface to life, and changes a *good* interface into a *great* one.
+The CSS transition property is essential for modern UI design. Animation brings an interface to life, and changes a merely *good* interface into a *great* one.
 
 ## Getting Started
 
