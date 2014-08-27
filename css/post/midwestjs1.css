@@ -1,0 +1,60 @@
+.header a:link, .header a:visited,
+.footer a:link, .footer a:visited {
+	color: #F0FFCD;
+	text-shadow: 2px 2px 0 #1F514A;
+	transition: color 200ms ease;
+}
+.header a:hover, .header a:focus {
+	color: #2E6358;
+}
+
+.header {
+	padding: 1px 1px 60px;
+	background: #256F72 url('/img/minneapolis_landscape.jpg') bottom center;
+	background-size: cover;
+	color: #722825;
+	height: 300px;
+	overflow-x: hidden;
+}
+@media (min-width: 600px) {
+	.header {
+		height: 600px;
+	}
+}
+.nav__main {
+	background: rgba(31, 81, 74, 0.7);
+	bottom: 0;
+	padding: 8px;
+}
+.nav__main a:hover, .nav__main a:focus,
+.footer a:hover, .footer a:focus {
+	border-bottom: 1px solid #F0FFCD;
+	color: #F0FFCD;
+}
+
+.lead {
+	font-size: 1.5em;
+}
+
+h3 {
+	margin-top: 32px;
+}
+h4 {
+	margin-bottom: 32px;
+}
+
+a:link, a:visited {
+	color: #2E6358;
+}
+
+.footer:before {
+	background: #2E6358;
+}
+
+.footer {
+	background: #064446;
+}
+
+.footer p {
+	color: #F0FFCD;
+}

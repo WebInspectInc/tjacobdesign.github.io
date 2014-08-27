@@ -1,0 +1,203 @@
+---
+layout: post
+title: "MidwestJS 2014"
+date: 2014-8-26
+css: "/css/post/midwestjs1.css"
+hasComments: true
+---
+
+<p class="lead">Minneapolis. The great city of water. The 46th largest city in the U.S. The city with roads that were, according to some of the locals, designed by drunks.</p>
+
+And yeah, they were about that bad. As far as I know everyone survived the trip though, that’s the important thing, and aside from the crazy roads Minneapolis was a fantastic place to hold the first [MidwestJS](http://midwestjs.com/).
+
+## Thoughts from a first-time conference goer
+
+MidwestJS was held at the [University of St. Thomas](http://www.stthomas.edu/), which is a beautiful and spacious building, right in the heart of downtown Minneapolis. In many ways it was ideal for a tech conference. Lots of nice sized classrooms, flexibility on food and drink restrictions, plenty of good places to explore in the surrounding area, and nice and quiet, which can be hard to find in a big city.
+
+The same thing that made it great also made it terrible though: it was big. It was hard to really reconnect with anyone I met at the conference. Yes, I met a lot of new people, but most of them I only talked to once. There were just too many places to look if I wanted to find a familiar face. The size also made it feel a little bit like we were back in school, class had to let out 10 minutes early to allow people to find their next class in time, and it’s a bit of a shame to waste so much time walking between classes.
+
+## Technology surprises
+
+**Disclaimer:** These are simply my thoughts and observations, and may have absolutely nothing to do with reality.
+
+Roughly 90% of the people I met at MidwestJS were big [AngularJS](https://angularjs.org/) fans. That was a surprise for me, I had no clue that Angular was such a big deal in the industry. My opinion is that Angular is generally too heavy for most of my needs (currently weighing in at just over 100k), but no one seemed to have that concern there. I don’t know if I’m behind the times or simply don’t work on big enough projects, but it was interesting to me to see what a huge role that plays in so many tech stacks.
+
+It also surprised me how few tools I saw there, seems like very few people have jumped on the front-end tooling bandwagon. I heard [Browserify](http://browserify.org/) and [RequireJS](http://requirejs.org/) mentioned a few times, but not much. I heard nothing about CSS preprocessors, and very little about task runners (a few references to [Grunt](http://gruntjs.com], nothing about [Gulp](http://gulpjs.com)). In my circles those are really big things right now, so it surprised me that I didn’t hear much about them.
+
+<p class="lead">As for the actual talks, they were top-notch. I enjoyed and learned from most (if not all) of the ones that I saw, and the time, effort, and cash were definitely worth it.</p>
+
+You can see the videos from the conference over on [YouTube](https://www.youtube.com/playlist?list=PLRAgVPRhmEvro-0tzfV6dqJrqovCer5rh), and the slides are on [Github](https://github.com/midwestjs/2014). My notes from the talks that I attended are below.
+
+## Notes from the conference
+
+### 1. Keynote: Titanium
+
+#### (Jeff Haynie [@jhaynie](https://twitter.com/jhaynie))
+
+* @JHanie is CEOGeek, and the CEO of [Appcelerator](http://www.appcelerator.com/).
+* He loves Titanium, and he obviously still gets excited by programming.
+* Titanium is pretty sweet, it’s come a long way since I last used it. Looks like it might even be able to compete with native apps. Some native apps anyway, not all, and possibly not even most, but it still looks pretty sweet.
+* [HyperLoop](http://www.appcelerator.com/blog/2013/10/introducing-hyperloop/) is a compiler named for and by Elon Musk
+* Elon Musk only makes $1 a year
+* It has a pretty sweet REPL, and a lot of jQuery-esque things like easy animations
+* Doesn’t seem to have great support for native animations, UI, etc. Huge downside, but not something easy to fix when supporting iOS and Android
+* Ti.Next is reimplemented Titanium APIs in the new HyperLoop compiler
+* Ti.Next has full Node.js implementation
+* Ti.Next is trying to get away from platform-independent things and trying to choose the native things “automatically”
+* Gen6 compiler is almost done, and will be called Hyperloop 2.0
+* HyperLoop is going to support iOS, Android, and Windows. It’s 9+ months away from completion
+
+### 2. JavaScript Promises in Depth
+####(Aaron Eischeid [aye-shied] [@aeischeid](https://twitter.com/aeischeid))
+
+* Promises are tricky, due (at least partially) to their asynchronous nature
+* A promise is an object or function with a `then` method that behaves according to the spec
+* Promises help us deal with concurrency by expressing code in a more brain-friendly asynchronous way
+* Promises always have a state, and it can be one of four things:
+	* Fulfilled
+	* Rejected
+	* Pending
+	* Settled
+* JS Promises are pretty much the same as the old callback style, but they add a `.then` method instead of the callback
+* Promises help you to avoid the “pyramid of doom”
+* `.then(fulfill, reject)`
+* Two kinds of errors: “explicit” and “all the rest”
+* JS Promises have a `.catch` method, which is just sugar, but nice to use semantically
+* `.catch` only runs if the promise passed has a “rejected” status
+* `.then` always returns another promise.
+* Promises can be a bit unpredictable, due to their async nature. Things can even execute in a different order in two different browsers
+* In promises `this` is supposed to be undefined. In non-strict mode it = window
+* Promises are not to be confused with events, nor are they always the best way to do asynchronous stuff.
+* jQuery promises don’t return another promise. That’s why a lot of people hate it.
+* jQuery’s way isn’t really bad, it’s just confusing, because it doesn’t fit the spec
+* More resources:
+	* http://blog.getify.com/promises-part-1
+	* http://dailyjs.com/2014/02/20/promises-in-detail/
+	* http://html5rocks.com/en/tutorials/es6/promises
+	* http://promisejs.org/
+
+### 3. The Conventions Ember.js Provides to Make You Happy and Productive
+####(Stefan Penner [@stefanpenner](https://twitter.com/stefanpenner))
+
+* He’s on the Ember core team, he works for Yapp Labs (in NYC)
+* Everyone calls him Stef
+* Ember is a framework for creating *ambitious* web apps (but it works with tiny apps too)
+* Ember uses Handlebars (double curly braces)
+* Ember’s big thing is abstractions. Lots of abstractions
+* Humans are high-pass filters. We filter out everything except what we deem as the “important” things to see
+* Us as filters is a problem for working on teams, because no one knows everything
+* [http://confidentruby.com/](http://confidentruby.com/) - highly recommended book on Ruby
+* Ember tries to equalize things so that everyone can talk in the same format and the same language (kinda sorta)
+* Ember was a part of the writing of the Promise spec. Their implementation inspired it a bit
+* Ember used to be global, but they fixed that with ES6 modules
+* Ember CLI looks pretty cool. It’s very beta, but lots of people are playing with it
+* Ember CLI gives you a nice quick start:
+	* npm install -g ember-cli
+	* ember new app-name
+* Ember CLI is *sweet*. Kinda like Grunt but without any setup, and with lots of minification/fingerprinting magic
+* If you use Ember’s syntax for links then it warns you about dead links (useful)
+* Allows you to simulate latency in the system and gives you great templates that you can swap in and out based on whatever
+* Ember looks like one monolithic app but it doesn’t have to be
+* Ember’s goal is to improve code sharing, reduce edge-cases, improve composition, and continue to learn and iterate
+* Ember inspector is a thing too (in Chrome and Firefox), and it’s really good for debugging promises
+
+### 4. Browserify: All the Things
+#### (Shane Stillwell [@ShaneStillwell](https://twitter.com/shanestillwell))
+
+* Browserify makes script loading better
+* Browserify adds an `exports` object which allows you to transport objects across files
+* Transforms are the real power of Browserify
+* Transforms can be used to do things like convert CoffeeScript to JS
+
+### 5. Flying Roots with the HTML5 Gamepad API
+#### (Kevin Whinnery [@kevinwhinnery](https://twitter.com/kevinwhinnery))
+
+* [Sweet 8-bit slides](http://www.slideshare.net/kwhinnery/get-pumped-for-the-html-5-gamepad-api) done in Keynote
+* Browsers don’t support USB controllers very well, they don’t necessarily map the right buttons
+* [Starfox](https://github.com/kwhinnery/starfox) is a tool he created that basically lets you listen for the gamepad buttons (and figure out which is which)
+* `navigator.getGamepads()`
+
+### 6. Whirlwind Tour of Scaleable Vector Graphics
+####(Marc Grabanski [@1Marc](https://twitter.com/1marc))
+
+* SVG is printer friendly
+* Including SVG with an Object tag allows for an image fallback
+* [http://svgeneration.com](http://svgeneration.com)
+* Marc created the original jQuery UI datepicker
+* SVGMagic, SVGeezy -- fallback things
+* Microsoft had a proprietary vector format: VML
+* [Raphael](http://raphaeljs.com/) lets you move left/right absolutely, rather than relatively to its transforms
+* [Dmitry](http://dmitry.baranovskiy.com/) (creator of Raphael) has talks called “You suck at SVG” and “You suck at JavaScript”. Both of them are apparently really good
+* Clown Car Technique, using SVG to mock an image element
+* Vectron converts SVG files to Raphael with Ajax
+* SVG Stacks are coming. They work in Firefox, but nowhere else yet. :/
+* Use Snap over Raphael unless you need to support IE8 (so always use Snap)
+* Resources:
+	* [http://www.anthonycalzadilla.com/i-twitty-the-fool/](http://www.anthonycalzadilla.com/i-twitty-the-fool/)
+	* [https://useiconic.com/tour](https://useiconic.com/tour)
+	* [http://svg-wow.org/](http://svg-wow.org/)
+	* [http://svgeneration.com/](http://svgeneration.com/)
+	* [http://codepen.io/1Marc/](http://codepen.io/1Marc/)
+	* [http://playgroundinc.com/](http://playgroundinc.com/)
+	* [http://www.pencilscoop.com/archive/](http://www.pencilscoop.com/archive/)
+
+## Day two:
+### 7. Single Page Applications - the Web’s Horseless Carriage
+####(Trek Glowacki [@trek](https://twitter.com/trek))
+
+* Peripatetic - word for someone who travels around and things/works
+* @trek likes words, and had an incredible intro because of that
+* Two hard things in computer science: cache invalidation and naming things
+* Words are like a lense into ideas
+* “Horseless Carriage” was an incomplete idea of cars. Some horseless carriages actually had fake horses attached, to make people more comfortable
+* “webpage” is a misnomer, it’s more of a “webscroll”
+* @trek thinks no-js is a strawman, not really a concern anymore
+* Node can be used for a no-js fallback. React is good for this, because it works in browser and node
+* He thinks server rendering is reaching its end, not much benefit over rendering in the browser
+
+### 8. JavaScript Test Driven Development using Jasmine and Karma
+#### (Chris Bartling [@cbartling](https://twitter.com/cbartling))
+
+* JavaScript is a first-class citizen now, why aren’t we treating it that way?
+* Unit tests drive development and design in TDD
+* “red, green, clean” - start with failing tests, make them pass, refactor code and tests
+* Spike solutions are for when you don't know your tools or what you're building. They’re thrown away
+* Karma is his recommended test runner
+
+### 9. Improving Application UX with Genie.js
+#### (Kent C. Dodds [@kentcdodds](https://twitter.com/kentcdodds))
+
+* Gmail shortcuts are from VIM
+* Keyboard shortcuts aren’t intuitive. Hence [Genie.js](http://kent.doddsfamily.us/genie/)
+* Keyboard shortcuts *are* very fast and easy once learned. So they can’t go away
+* Note: you don’t usually need to walk people through how to program something in a talk. We can learn that on our own time (it’s what we do every day, after all)
+* Genie is built on Angular, he wants to build a non-angular version (and needs help)
+
+### 10. Traces of Errors - Getting Better JavaScript Stacktraces
+#### (Todd Gardner [@toddhgardner](https://twitter.com/toddhgardner))
+
+* Hilarious JS talk: [wat](https://www.destroyallsoftware.com/talks/)
+* JS errors don’t usually tell you anything, due to minification et al
+* The internet is broken and nobody cares
+* No browser consistently supports the error spec (Firefox is the closest)
+* Throwing an error changes things in IE and Safari (same in Firefox and Chrome)
+* Throwing anything but an error in JS is kinda silly. Don’t do it! (throwing errors can be a little silly too, but it does make a difference in IE and Safari)
+* window.onerror = global event handler that is safe in any browser. Any uncaught errors go there
+* window.onerror was improved 6 months ago by all the browsers (except maybe Safari) which has the error object now
+* Naming functions improves stack traces by a lot. You have to be careful with IE9 and below leaking to the function above though
+* Callbacks don’t jump errors out to the function that called it, they jump back to the native code (which goes to onerror)
+* “monkey patching” is now called “duck punching”
+
+### 11. EnyoJS: A Scalable Code Base
+####(Derek Anderson [@dmikeyanderson](https://twitter.com/dmikeyanderson))
+
+* Derek works for LG:Electronics, working on Enyo. He works to give out free software, and thinks that’s awesome
+* Was built into HP’s Touchpad OS (a tablet that bombed), worked well as a way to build native apps with web tech
+* LG webOS on a smart TV has lots of cool animations (in a video)
+* Enyo’s big goal: Native quality applications made with web technologies
+* Developers like decisions. We like to decide things, which is why it’s a huge part of our job
+
+### 12. Conference Wrap Up and Keynote: LoopBack
+#### (Bobby Warner [@bobbywarner](https://twitter.com/bobbywarner), Shubhra Kar [@shubrakar](https://twitter.com/shubrakar))
+
+* [LoopBack](http://loopback.io/) is awesome. But I can’t use it right now. :'(
