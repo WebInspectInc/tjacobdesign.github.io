@@ -3,7 +3,6 @@ layout: post
 title: "Random Button Styles"
 date: 2014-5-6 7:50:00
 css: "/css/post/random-button-styles.css"
-hasComments: true
 ---
 
 I’m in a mood to make some CSS buttons, so that’s what I’m going to do here. Here are a bunch of button styles that you may or may not recognize, done purely in CSS of course:

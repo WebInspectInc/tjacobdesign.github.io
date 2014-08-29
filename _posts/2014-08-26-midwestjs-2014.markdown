@@ -10,7 +10,7 @@ hasComments: true
 
 And yeah, they were about that bad. As far as I know everyone survived the trip though, that’s the important thing, and aside from the crazy roads Minneapolis was a fantastic place to hold the first [MidwestJS](http://midwestjs.com/).
 
-## Thoughts from a first-time conference goer
+## Thoughts from a first-time conference&nbsp;goer
 
 MidwestJS was held at the [University of St. Thomas](http://www.stthomas.edu/), which is a beautiful and spacious building, right in the heart of downtown Minneapolis. In many ways it was ideal for a tech conference. Lots of nice sized classrooms, flexibility on food and drink restrictions, plenty of good places to explore in the surrounding area, and nice and quiet, which can be hard to find in a big city.
 

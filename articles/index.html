@@ -5,7 +5,7 @@ sitemap:
   changefreq: weekly
 ---
 
-<section role="main">
+<section role="main" class="articles">
 	<div>
 		{% for post in paginator.posts %}
 			<p class="time">Published <time class="meta" datetime="{{ post.date }}">{{ post.date | date_to_string }}</time> by{% if post.author %} post.author {% else %} Timothy Miller {% endif %}</p>
