@@ -1,0 +1,85 @@
+
+.toggle-button {
+	position: fixed;
+	top: 16px;
+	right: 16px;
+}
+
+[role="main"] h1,
+[role="main"] h2,
+[role="main"] h3,
+[role="main"] h4,
+[role="main"] h5 {
+	font-family: Baskerville;
+}
+
+[role="main"] p,
+[role="main"] ol,
+[role="main"] ul,
+.toggle-button {
+	font-family: Trebuchet MS;
+	letter-spacing: -0.3px;
+}
+
+.wf-active h1,
+.wf-active h2,
+.wf-active h3,
+.wf-active h4,
+.wf-active h5 {
+	font-family: Aleo;
+	letter-spacing: 0;
+}
+
+.wf-active p,
+.wf-active ol,
+.wf-active ul,
+.wf-active .toggle-button {
+	font-family: Lato;
+	letter-spacing: 0;
+}
+
+.toggle-button {
+	background: #2C3E50;
+	color: #00B3FF;
+	border: 0;
+	padding: 4px 8px;
+	cursor: pointer;
+	border-radius: 2px;
+	font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Lato';
+	src: url('../../fonts/lato/lato-regular-webfont.woff') format('woff'),
+         url('../../fonts/lato/lato-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Lato';
+	src: url('../../fonts/lato/lato-italic-webfont.woff') format('woff'),
+         url('../../fonts/lato/lato-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../fonts/lato/lato-bold-webfont.woff') format('woff'),
+         url('../../fonts/lato/lato-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Aleo';
+    src: url('../../fonts/aleo/aleo-bold-webfont.woff') format('woff'),
+         url('../../fonts/aleo/aleo-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
