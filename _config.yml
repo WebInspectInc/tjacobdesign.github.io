@@ -6,3 +6,4 @@ highlighter: pygments
 paginate: 5
 paginate_path: "articles/:num"
 permalink: /:title/
+port: 4321
